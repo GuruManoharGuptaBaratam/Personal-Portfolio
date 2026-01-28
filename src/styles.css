@@ -31,6 +31,100 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app-faq-button {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.app-faq-button:hover {
+  color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.slide-faq {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+
+.faq-header {
+  margin-bottom: 1rem;
+}
+
+.faq-header h2 {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+
+
+.faq-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.6rem;
+  max-height: 460px;
+}
+
+
+
+.faq-item + .faq-item {
+  margin-top: 1.3rem;
+}
+
+
+
+.faq-item h3 {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+/* Answer styling (matches paragraph text everywhere) */
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+/* Scrollbar styling (same as project scroll areas) */
+
+.faq-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.faq-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.faq-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(91, 100, 115, 0.3);
+  border-radius: 999px;
+}
+
+.faq-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(91, 100, 115, 0.35) transparent;
+}
+
 .app-root {
   display: flex;
   flex-direction: column;
