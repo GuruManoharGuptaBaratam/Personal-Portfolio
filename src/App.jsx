@@ -523,7 +523,6 @@ function App() {
 
   return (
     <div className="app-root">
-
       <header className="app-header">
         <div className="app-header-left">
           <span className="app-name">Guru Manohar Gupta</span>
@@ -555,12 +554,11 @@ function App() {
             </Slide>
           ))}
 
-
         {isFaqOpen && (
           <Slide active position={0}>
             <div className="slide-faq">
               <div className="faq-header">
-                <h2>Frequently Asked Questions</h2>
+                <h2>Frequently Asked Questions (FAQ'S)</h2>
               </div>
               <br></br>
               <div className="faq-scroll">
@@ -572,8 +570,8 @@ function App() {
                     creates a space where I define the problem, model the
                     system, implement it, and observe where assumptions break. A
                     large part of my time goes into figuring out how to learn
-                    effectively— testing ideas, analyzing failures, and
-                    iterating—rather than just producing outcomes.
+                    effectively testing ideas, analyzing failures, and iterating
+                    rather than just producing outcomes.
                   </p>
                 </div>
                 <br></br>
@@ -624,7 +622,7 @@ function App() {
                   <p>
                     My decisions are guided by clarity and observability. I
                     prefer designs where data flow, state transitions, and
-                    responsibilities are explicit—whether in a component
+                    responsibilities are explicit whether in a component
                     hierarchy, an API boundary, or a larger system. If a design
                     becomes difficult to reason about, I treat that as a signal
                     to simplify.
@@ -666,7 +664,7 @@ function App() {
                     and understanding system behavior are central to the work. I
                     prefer environments where I can explore how components
                     interact, validate assumptions through implementation, and
-                    gradually build depth—whether the interface is visual,
+                    gradually build depth whether the interface is visual,
                     programmatic, or something in between.
                   </p>
                 </div>
@@ -675,7 +673,6 @@ function App() {
           </Slide>
         )}
       </main>
-
 
       <Navigation
         onNext={goNext}

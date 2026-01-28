@@ -24,13 +24,17 @@ body,
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    "Segoe UI", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "Segoe UI",
+    sans-serif;
   background-color: var(--bg-main);
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
 }
-
 
 .app-header-right {
   display: flex;
@@ -53,15 +57,11 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-
-
 .slide-faq {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-
-
 
 .faq-header {
   margin-bottom: 1rem;
@@ -72,8 +72,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-
-
 .faq-scroll {
   flex: 1;
   overflow-y: auto;
@@ -81,13 +79,9 @@ body {
   max-height: 460px;
 }
 
-
-
 .faq-item + .faq-item {
   margin-top: 1.3rem;
 }
-
-
 
 .faq-item h3 {
   font-size: 0.9rem;
@@ -97,15 +91,35 @@ body {
   margin-bottom: 0.3rem;
 }
 
-/* Answer styling (matches paragraph text everywhere) */
-
 .faq-item p {
   font-size: 0.95rem;
   color: var(--text-main);
   line-height: 1.55;
 }
+.faq-scroll {
+  position: relative;
+}
 
-/* Scrollbar styling (same as project scroll areas) */
+.faq-item {
+  position: relative;
+  padding: 1.2rem 1.4rem;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.faq-scroll:hover .faq-item {
+  filter: blur(1.5px);
+  opacity: 0.6;
+}
+
+.faq-scroll .faq-item:hover {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(-2px);
+  z-index: 2;
+}
 
 .faq-scroll::-webkit-scrollbar {
   width: 6px;
@@ -124,12 +138,17 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgba(91, 100, 115, 0.35) transparent;
 }
-
 .app-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, #ffffff 0, #f4f5f7 40%, #e6e8ec 100%);
+
+  background-color: var(--bg-main);
+  background-image: radial-gradient(
+    rgba(21, 25, 34, 0.12) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
 }
 
 .app-header {
@@ -259,24 +278,19 @@ body {
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 0.9rem;
-
 }
 
 .intro-title {
   font-size: clamp(2.4rem, 4vw, 3rem);
   letter-spacing: 0.04em;
   margin-bottom: 0.8rem;
-
 }
-
 
 .intro-quote {
   max-width: 480px;
   color: var(--text-muted);
   font-size: 0.98rem;
 }
-
-/* About */
 
 .slide-two-column {
   display: grid;
@@ -294,11 +308,11 @@ body {
   position: relative;
   overflow: hidden;
 }
-.about-photo-img{
-    width: 100%;
+.about-photo-img {
+  width: 100%;
   aspect-ratio: 4 / 5.5;
   border-radius: 16px;
-   background: linear-gradient(145deg, #d9dde5, #f0f2f7);
+  background: linear-gradient(145deg, #d9dde5, #f0f2f7);
   border: 2px solid var(--border-subtle);
   position: relative;
   overflow: hidden;
@@ -309,7 +323,12 @@ body {
   inset: 14%;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.9);
-  background: radial-gradient(circle at 30% 20%, #ffffff 0, #dde3f0 55%, #c4ccd8 100%);
+  background: radial-gradient(
+    circle at 30% 20%,
+    #ffffff 0,
+    #dde3f0 55%,
+    #c4ccd8 100%
+  );
 }
 
 .about-text > h2 {
@@ -344,8 +363,6 @@ body {
 .about-list-group ul {
   color: var(--text-main);
 }
-
-
 
 .slide-skills h2 {
   margin-bottom: 1.5rem;
@@ -394,13 +411,10 @@ body {
     color 140ms ease-out;
 }
 
-
-
 .skills-grid li:hover {
   transform: translateX(4px);
   color: var(--text-main);
 }
-
 
 .project-scroll-area {
   margin-top: 1.6rem;
@@ -449,7 +463,6 @@ body {
   padding-right: 0.6rem;
 }
 
-
 .slide-project::-webkit-scrollbar {
   width: 6px;
 }
@@ -467,7 +480,6 @@ body {
   background-color: rgba(91, 100, 115, 0.4);
 }
 
-
 .slide-project {
   scrollbar-width: thin;
   scrollbar-color: rgba(91, 100, 115, 0.3) transparent;
@@ -475,6 +487,9 @@ body {
 
 .slide-project h2 {
   margin-bottom: 0.5rem;
+  text-decoration: underline dashed rgba(176, 180, 189, 0.855);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 10px;
 }
 
 .project-summary {
@@ -553,7 +568,6 @@ body {
   background-color: #fff;
 }
 
-
 .slide-contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
@@ -566,13 +580,11 @@ body {
 }
 
 .contact-visual {
-    margin-left: 15rem;
+  margin-left: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-
 
 .contact-phone-image {
   width: 380px;
@@ -582,34 +594,28 @@ body {
   opacity: 0.95;
 }
 
-
-
 .phone-screen {
   position: absolute;
   top: 24px;
   left: 16px;
   right: 16px;
   height: 190px;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      #111 0px,
-      #111 4px,
-      #0b0d10 4px,
-      #0b0d10 8px
-    );
+  background: repeating-linear-gradient(
+    0deg,
+    #111 0px,
+    #111 4px,
+    #0b0d10 4px,
+    #0b0d10 8px
+  );
   border: 1px solid #000;
 }
-
-
-
 
 .slide-contact {
   max-width: 700px;
 }
 
 .slide-contact h2 {
-    font-size: 2rem;
+  font-size: 2rem;
   margin-bottom: 0.9rem;
 }
 
@@ -650,8 +656,6 @@ body {
 .contact-list a:hover {
   text-decoration: underline;
 }
-
-
 
 .navigation {
   position: fixed;
@@ -726,21 +730,18 @@ body {
   border-radius: 4px;
   border: 1px solid rgba(209, 213, 221, 0.9);
   background-color: #ffffff;
-  font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono",
+  font-family:
+    "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   font-size: 0.72rem;
 }
 
-
-
 @media (max-width: 900px) {
-
-     .slide-inner {
+  .slide-inner {
     max-height: calc(100vh - 140px);
     overflow-y: auto;
     justify-content: flex-start;
   }
-
 
   .slide-inner::-webkit-scrollbar {
     width: 6px;
@@ -775,13 +776,12 @@ body {
   .project-layout {
     grid-template-columns: 1fr;
   }
-    .slide-contact-layout {
+  .slide-contact-layout {
     grid-template-columns: 1fr;
   }
 
   .contact-visual {
     display: none;
-    
   }
   .contact-list li {
     flex-direction: column;
@@ -789,8 +789,6 @@ body {
     gap: 0.25rem;
     font-size: 0.8rem;
   }
-
-
 }
 
 @media (max-width: 640px) {
@@ -816,4 +814,3 @@ body {
     gap: 0.35rem;
   }
 }
-
